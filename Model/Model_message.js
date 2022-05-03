@@ -11,14 +11,17 @@ mongoose.connect(process.env.mongoDbUrl, {useNewUrlParser:true, useUnifiedTopolo
 const Schema = mongoose.Schema;
 
 const datainDb = new Schema({
-    username : { type:String, lowercase:true, unique:true},
+    username : { 
+        
+        type:String, lowercase:true, unique:false},
     data : String,
-    tag : Number,
+    tag : String,
     time : String,
   
 })
 
 var DatainDb = mongoose.model('Data',datainDb);
+
 
 module.exports = DatainDb;
 

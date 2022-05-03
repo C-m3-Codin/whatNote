@@ -7,17 +7,9 @@ const messageHandlerfuction  = require('./MessageHandle/messageHandler');
 
 require('dotenv').config()
 // const url =  process.env.mongoDbUrl;
-
-
-
 require('dotenv').config()
 
 const url =  process.env.mongoDbUrl;
-const mongoose = require("mongoose");
-
-
-
-
 
 
 if(fs.existsSync(SESSION_FILE_PATH)) {
@@ -52,14 +44,7 @@ client.on('authenticated', (session) => {
 
 });
 
-
-
-
-
-
 // session
-
-
 
 client.on('ready', () => {
     console.log('Client is ready!');
