@@ -3,7 +3,7 @@ const SESSION_FILE_PATH = './session.json';
 let sessionData;
 const qrcode = require('qrcode-terminal');
 const {LocalAuth, Client, LegacySessionAuth } = require('whatsapp-web.js');
-const messageHandlerfuction  = require('./messageHandler');
+const messageHandlerfuction  = require('./MessageHandle/messageHandler');
 
 require('dotenv').config()
 // const url =  process.env.mongoDbUrl;
