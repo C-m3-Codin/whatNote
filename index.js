@@ -3,7 +3,19 @@ const SESSION_FILE_PATH = './session.json';
 let sessionData;
 const qrcode = require('qrcode-terminal');
 const {LocalAuth, Client, LegacySessionAuth } = require('whatsapp-web.js');
-const messageHandler  = require('./messageHandler');
+const messageHandlerfuction  = require('./messageHandler');
+
+require('dotenv').config()
+// const url =  process.env.mongoDbUrl;
+
+
+
+require('dotenv').config()
+
+const url =  process.env.mongoDbUrl;
+const mongoose = require("mongoose");
+
+
 
 
 
@@ -53,7 +65,8 @@ client.on('ready', () => {
     console.log('Client is ready!');
 });
 
-client.on('message',messageHandler);
+client.on('message',messageHandlerfuction);
 client.initialize();
 
 module.exports = client
+module.exports = url
